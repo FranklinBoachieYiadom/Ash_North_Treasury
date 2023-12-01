@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="/script.js"></script>
 </head>
-<body onload="date()" id="mainBody">
+<body onload="date(event)" id="mainBody">
 
 <img src="logo.png" class="logo1" alt="logo">
 <p id="paragraph1">Seveth Day Adventist Church<br>Ashaiman North Church<br>Treasury Department</p>
@@ -328,8 +328,9 @@
     </tr>
 </table>
 
-<button onclick="SumOfIncme()">Calculate</button>
-<button onclick="downloadAsPDF()">Download as PDF</button>
+<button onclick="SumOfIncme(event)">Calculate</button>
+<button onclick="downloadAsPDF(event)">Download as PDF</button>
+
 <p>Designed by <a href="#" id="designBy">Tech De Phlashly</a></p>
 
 </body>

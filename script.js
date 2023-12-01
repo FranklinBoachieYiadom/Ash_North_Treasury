@@ -4,7 +4,7 @@ function login(event){
     var userName = document.getElementById("uName").value;
     var passWord = document.getElementById("uPass").value;
     if(userName == "franklin" && passWord =="franklin" ||userName == "eben" && passWord =="eben"){
-        alert("Login Successful");
+       /*  alert("Login Successful"); */
         var targetPageUrl = 'main.html';
         window.location.href = targetPageUrl;    
     }
@@ -14,7 +14,8 @@ function login(event){
 }
 
 // The function to generate current Date
- function date(){
+ function date(event){
+    event.preventDefault()
         var currentDate= new Date();
         var day = currentDate.getDate();
         var month = currentDate.getMonth()+1;
@@ -27,7 +28,9 @@ function login(event){
 // This function controls the whole program, it is the onlickfunction for the calculate button
 var Amnt=[];
 var sum =0;
-function SumOfIncme(){
+
+function SumOfIncme(event){
+    event.preventDefault();
   //I have named all the text boxes where you type the amounts with an a1, a2, a3 and so on, this loop will get all the values from the text boxes and store it in an array declared up there called Amt
     for(let i=1;i<=18;i++){
   var getElmt=document.getElementById("a"+i);
@@ -96,13 +99,13 @@ document.getElementById("la2").textContent=LcbfAmount
 document.getElementById("la3").textContent=LlooseOfferingAmount
 document.getElementById("la4").textContent=LthanksAmount
 //Here are the values obtained from calculations for Conference Funds
-document.getElementById("ca2").textContent=CcbfAmount
-document.getElementById("ca3").textContent=ClooseOfferingAmount
-document.getElementById("ca4").textContent=CthanksAmount
+document.getElementById("ca2").textContent=CcbfAmount.toFixed(2)
+document.getElementById("ca3").textContent=ClooseOfferingAmount.toFixed(2)
+document.getElementById("ca4").textContent=CthanksAmount.toFixed(2)
 //Here are the values obtained from calculations for District Funds
-document.getElementById("da2").textContent=DcbfAmount
-document.getElementById("da3").textContent=DlooseOfferingAmount
-document.getElementById("da4").textContent=DthanksAmount
+document.getElementById("da2").textContent=DcbfAmount.toFixed(2)
+document.getElementById("da3").textContent=DlooseOfferingAmount.toFixed(2)
+document.getElementById("da4").textContent=DthanksAmount.toFixed(2)
 
 //Here i am puting all the values i get from the ones we won't calculate into an array, then i will add the calculated values and add them.
 var LAmount=[];
@@ -133,7 +136,8 @@ document.getElementById("dTotal").textContent="Ghc "+dFunds.toFixed(2)
 }
 
 // The function to download page as PDF
-function downloadAsPDF() {
+function downloadAsPDF(event) {
+    event.preventDefault()
     // Select the element that you want to convert to PDF
     const element = document.getElementById("table") ;
     // Use html2pdf library to generate PDF
@@ -141,3 +145,8 @@ function downloadAsPDF() {
         .from(element)
         .save();
 }
+
+
+
+
+
