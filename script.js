@@ -1,6 +1,6 @@
 //Function to check the username and password to help you login 
-function login(){
-   
+function login(event){
+    event.preventDefault();
     var userName = document.getElementById("uName").value;
     var passWord = document.getElementById("uPass").value;
     if(userName == "franklin" && passWord =="franklin" ||userName == "eben" && passWord =="eben"){
@@ -23,7 +23,6 @@ function login(){
         var out= day +"/"+month+"/"+year ;
         document.getElementById("date").innerText= out;
     }
-
 
 // This function controls the whole program, it is the onlickfunction for the calculate button
 var Amnt=[];
@@ -136,14 +135,11 @@ document.getElementById("dTotal").textContent="Ghc "+dFunds.toFixed(2)
 }
 
 // The function to download page as PDF
-function downloadAsPDF() {
-    
+function downloadAsPDF() { 
     // Select the element that you want to convert to PDF
     const element = document.getElementById("table") ;
     // Use html2pdf library to generate PDF
-    html2pdf(element)
-        .from(element)
-        .save();
+    html2pdf(element).from(element).save();
 }
 
 
