@@ -1,6 +1,6 @@
 //Function to check the username and password to help you login 
-function login(event){
-    event.preventDefault();
+function login(){
+   
     var userName = document.getElementById("uName").value;
     var passWord = document.getElementById("uPass").value;
     if(userName == "franklin" && passWord =="franklin" ||userName == "eben" && passWord =="eben"){
@@ -14,8 +14,8 @@ function login(event){
 }
 
 // The function to generate current Date
- function date(event){
-    event.preventDefault()
+ function date(){
+   
         var currentDate= new Date();
         var day = currentDate.getDate();
         var month = currentDate.getMonth()+1;
@@ -29,8 +29,8 @@ function login(event){
 var Amnt=[];
 var sum =0;
 
-function SumOfIncme(event){
-    event.preventDefault();
+function SumOfIncme(){
+    
   //I have named all the text boxes where you type the amounts with an a1, a2, a3 and so on, this loop will get all the values from the text boxes and store it in an array declared up there called Amt
     for(let i=1;i<=18;i++){
   var getElmt=document.getElementById("a"+i);
@@ -136,8 +136,8 @@ document.getElementById("dTotal").textContent="Ghc "+dFunds.toFixed(2)
 }
 
 // The function to download page as PDF
-function downloadAsPDF(event) {
-    event.preventDefault()
+function downloadAsPDF() {
+    
     // Select the element that you want to convert to PDF
     const element = document.getElementById("table") ;
     // Use html2pdf library to generate PDF
