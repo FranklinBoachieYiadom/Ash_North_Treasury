@@ -1,337 +1,297 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Ash.North SDA Church Treasury</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/icon" href="favicon.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="script.js"></script>
-</head>
-<body onload="date()" id="mainBody">
-
-<img src="logo.png" class="logo1" alt="logo">
-<p id="paragraph1">Seveth Day Adventist Church<br>Ashaiman North Church<br>Treasury Department</p>
-<table id="table">
-    <tr>   
-        <td colspan="3" class="dateParagraph" id="date"></td>       
-    </tr>
-    <tr>
-        <td></td>    
-        <td style="width:80%" class="headings">All Incomes</td>    
-        <td class="headings">Amount(GHc)</td>    
-    </tr>
-    <tr>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/icon" href="favicon.png" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body onload="date()" id="mainBody">
+    <img src="logo.png" class="logo1" alt="logo" />
+    <p id="paragraph1">
+      Seveth Day Adventist Church<br />Ashaiman North Church<br />Treasury
+      Department
+    </p>
+    <table id="table">
+      <tr>
+        <td colspan="3" class="dateParagraph" id="date"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="width: 80%" class="headings">All Incomes</td>
+        <td class="headings">Amount(GHc)</td>
+      </tr>
+      <tr>
         <td>1</td>
         <td id="p1">Tithe</td>
-    <td><input type="number" id="a1"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="number" id="a1" /></td>
+      </tr>
+      <tr>
         <td>2</td>
         <td id="p2">C.B.F</td>
-    <td><input type="number" id="a2"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="number" id="a2" /></td>
+      </tr>
+      <tr>
         <td>3</td>
         <td id="p3">Loose Offering</td>
-    <td><input type="number" id="a3"></td>
-
-    </tr>
-    <tr>
+        <td><input type="number" id="a3" /></td>
+      </tr>
+      <tr>
         <td>4</td>
         <td id="p4">Thanksgiving</td>
-    <td><input type="number" id="a4"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="number" id="a4" /></td>
+      </tr>
+      <tr>
         <td>5</td>
         <td id="p5">Sabbath School</td>
-    <td><input type="number" id="a5"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="number" id="a5" /></td>
+      </tr>
+      <tr>
         <td>6</td>
         <td id="p6">Children Offering</td>
-    <td><input type="number" id="a6"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="number" id="a6" /></td>
+      </tr>
+      <tr>
         <td>7</td>
         <td id="p7">Budget</td>
-    <td><input type="number" id="a7"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="number" id="a7" /></td>
+      </tr>
+      <tr>
         <td>8</td>
         <td id="p8">Evangelism Fund</td>
-    <td><input type="number" id="a8"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="number" id="a8" /></td>
+      </tr>
+      <tr>
         <td>9</td>
-        <td><input type="text" id="p9"></td>
-    <td><input type="number" id="a9"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p9" /></td>
+        <td><input type="number" id="a9" /></td>
+      </tr>
+      <tr>
         <td>10</td>
-        <td><input type="text" id="p10"></td>
-    <td><input type="number" id="a10"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p10" /></td>
+        <td><input type="number" id="a10" /></td>
+      </tr>
+      <tr>
         <td>11</td>
-        <td><input type="text" id="p11"></td>
-    <td><input type="number" id="a11"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p11" /></td>
+        <td><input type="number" id="a11" /></td>
+      </tr>
+      <tr>
         <td>12</td>
-        <td><input type="text" id="p12"></td>
-    <td><input type="number" id="a12"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p12" /></td>
+        <td><input type="number" id="a12" /></td>
+      </tr>
+      <tr>
         <td>13</td>
-        <td><input type="text" id="p13"></td>
-    <td><input type="number" id="a13"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p13" /></td>
+        <td><input type="number" id="a13" /></td>
+      </tr>
+      <tr>
         <td>14</td>
-        <td><input type="text" id="p14"></td>
-    <td><input type="number" id="a14"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p14" /></td>
+        <td><input type="number" id="a14" /></td>
+      </tr>
+      <tr>
         <td>15</td>
-        <td><input type="text" id="p15"></td>
-    <td><input type="number" id="a15"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p15" /></td>
+        <td><input type="number" id="a15" /></td>
+      </tr>
+      <tr>
         <td>16</td>
-        <td><input type="text" id="p16"></td>
-    <td><input type="number" id="a16"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p16" /></td>
+        <td><input type="number" id="a16" /></td>
+      </tr>
+      <tr>
         <td>17</td>
-        <td><input type="text" id="p17"></td>
-    <td><input type="number" id="a17"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p17" /></td>
+        <td><input type="number" id="a17" /></td>
+      </tr>
+      <tr>
         <td>18</td>
-        <td><input type="text" id="p18"></td>
-    <td><input type="number" id="a18"></td>
-        
-    </tr>
-    <tr>
+        <td><input type="text" id="p18" /></td>
+        <td><input type="number" id="a18" /></td>
+      </tr>
+      <tr>
         <td></td>
         <td class="total">Total</td>
-    <td><b id="Inc"></b></td>
-        
-    </tr>
-    <tr>
-        <td></td>    
-        <td class="headings">Local Funds</td>    
-    <td></td>
-         
-    </tr>
-    <tr>
+        <td id="changeColor"><b id="Inc"></b></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="headings">Local Funds</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>1</td>
         <td id="l1"></td>
-       <td id="la1"></td>   
-    </tr>
-    <tr>
-        <td>2</td>    
-        <td id="l2"></td>    
-    <td id="la2"></td>
-        
-    </tr>
-    <tr>
-        <td>3</td>    
-        <td id="l3"></td>    
-    <td id="la3"></td>
-        
-    </tr>
-    <tr>
-        <td>4</td>    
-        <td id="l4"></td>    
-    <td id="la4"></td>
-      
-    </tr>
-    <tr>
-        <td>5</td>    
-        <td id="l5"></td>    
-    <td id="la5"></td>
-       
-    </tr>
-    <tr>
-        <td>6</td>    
-        <td id="l6"></td>    
-    <td id="la6"></td>
-        
-    </tr>
-    <tr>
-        <td>7</td>    
-        <td id="l7"></td>    
-    <td id="la7"></td>
-        
-    </tr>
-    <tr>
-        <td>8</td>    
-        <td id="l8"></td>    
-    <td id="la8"></td>
-        
-    </tr>
-    <tr>
-        <td>9</td>    
-        <td id="l9"></td>    
-    <td id="la9"></td>
+        <td id="la1"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td id="l2"></td>
+        <td id="la2"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td id="l3"></td>
+        <td id="la3"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td id="l4"></td>
+        <td id="la4"></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td id="l5"></td>
+        <td id="la5"></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td id="l6"></td>
+        <td id="la6"></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td id="l7"></td>
+        <td id="la7"></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td id="l8"></td>
+        <td id="la8"></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td id="l9"></td>
+        <td id="la9"></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td id="l10"></td>
+        <td id="la10"></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td id="l11"></td>
+        <td id="la11"></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td id="l12"></td>
+        <td id="la12"></td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td id="l13"></td>
+        <td id="la13"></td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td id="l14"></td>
+        <td id="la14"></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td id="l15"></td>
+        <td id="la15"></td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td id="l16"></td>
+        <td id="la16"></td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td id="l17"></td>
+        <td id="la17"></td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td id="l18"></td>
+        <td id="la18"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="total">Total</td>
+        <td><b id="lTotal"></b></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="headings">Conference Funds</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td id="c1"></td>
+        <td id="ca1"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td id="c2"></td>
+        <td id="ca2"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td id="c3"></td>
+        <td id="ca3"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td id="c4"></td>
+        <td id="ca4"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="total">Total</td>
+        <td><b id="cTotal"></b></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="headings">District Funds</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td id="d1"></td>
+        <td id="da1"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td id="d2"></td>
+        <td id="da2"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td id="d3"></td>
+        <td id="da3"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td id="d4"></td>
+        <td id="da4"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="total">Total</td>
+        <td><b id="dTotal"></b></td>
+      </tr>
+    </table>
+    <button onclick="SumOfIncme()">Calculate</button>
+    <button id="balance" onclick="goToSecondPage()">Balnce Sheet</button>
+    <button>Cut Off</button>
+    <button onclick="toPrint()">Download Page</button>
     
-    </tr>
-    <tr>
-        <td>10</td>    
-        <td id="l10"></td>    
-    <td id="la10"></td>
-        
-    </tr>
-    <tr>
-        <td>11</td>    
-        <td id="l11"></td>    
-    <td id="la11"></td>
-        
-    </tr>
-    <tr>
-        <td>12</td>    
-        <td id="l12"></td>    
-    <td id="la12"></td>
-        
-    </tr>
-    <tr>
-        <td>13</td>    
-        <td id="l13"></td>    
-    <td id="la13"></td>
-        
-    </tr>
-    <tr>
-        <td>14</td>    
-        <td id="l14"></td>    
-    <td id="la14"></td>
-       
-    </tr>
-    <tr>
-        <td>15</td>    
-        <td id="l15"></td>    
-    <td id="la15"></td>
-       
-    </tr>
-    <tr>
-        <td>16</td>    
-        <td id="l16"></td>    
-    <td id="la16"></td>
-       
-    </tr>
-    <tr>
-        <td>17</td>    
-        <td id="l17"></td>    
-    <td id="la17"></td>
-       
-    </tr>
-    <tr>
-        <td>18</td>    
-        <td id="l18"></td>    
-    <td id="la18"></td>
-        
-    </tr>
-    <tr>
-        <td></td>    
-        <td class="total">Total</td>    
-                  <td><b id="lTotal"></b></td>
-        
-    </tr>
-    <tr>
-        <td></td>    
-        <td class="headings">Conference Funds</td>    
-    <td ></td>
-           
-    </tr>
-    <tr>
-        <td>1</td>    
-        <td id="c1"></td>    
-    <td id="ca1"></td>
-        
-    </tr>
-    <tr>
-        <td>2</td>    
-        <td id="c2"></td>    
-    <td id="ca2"></td>
-      
-    </tr>
-    <tr>
-        <td>3</td>    
-        <td id="c3"></td>    
-    <td id="ca3"></td>
-        
-    </tr>
-    <tr>
-        <td>4</td>    
-        <td id="c4"></td>    
-    <td id="ca4"></td>
-        
-    </tr>
-    <tr>
-        <td></td>    
-        <td class="total">Total</td>    
-    <td><b id="cTotal"></b></td>
-        
-    </tr>
-    <tr>
-        <td></td>    
-        <td class="headings">District Funds</td>    
-    <td></td>   
-    </tr>
-    <tr>
-        <td>1</td>    
-        <td id="d1"></td>    
-    <td id="da1"></td>
-        
-    </tr>
-    <tr>
-        <td>2</td>    
-        <td id="d2"></td>    
-    <td id="da2"></td>
-        
-    </tr>
-    <tr>
-        <td>3</td>    
-        <td id="d3"></td>    
-    <td id="da3"></td>
-        
-    </tr>
-    <tr>
-        <td>4</td>    
-        <td id="d4"></td>    
-    <td id="da4"></td>
-        
-    </tr>
-    <tr>
-        <td></td>    
-        <td class="total">Total</td>    
-    <td><b id="dTotal"></b></td>
-        
-    </tr>
-</table>
+    
+    <p>Designed by <a href="#" id="designBy">Tech De Phlashly</a></p>
 
-<button onclick="SumOfIncme()">Calculate</button>
-<button onclick="downloadAsPDF()">Download as PDF</button>
-
-<p>Designed by <a href="#" id="designBy">Tech De Phlashly</a></p>
-
-</body>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>

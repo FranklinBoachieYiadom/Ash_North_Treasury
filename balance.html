@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ash.North SDA Church Treasury</title>
+        <link rel="icon" type="image/icon" href="favicon.png">
+        <link rel="stylesheet" href="style.css">     
+    </head>
+    <body onload="date()" id="mainBody">
+        <img src="logo.png" class="logo1" alt="logo">
+     <p id="paragraph1">Seveth Day Adventist Church<br>Ashaiman North Church<br>Treasury Department</p>
+  <table id="table">
+    <tr>   
+        <td colspan="3" class="dateParagraph" id="date"></td>       
+    </tr>
+    <tr>
+        <td></td>    
+        <td style="width:80%" class="headings">Balance Sheet</td>    
+        <td class="headings">Amount(GHc)</td>    
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Total Local Fund</td>
+        <td ><input type="number" id="totalFromLfund"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="2" class="headings"><b>Total Expenses</b></td>   
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e1"></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e2"></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e3"></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e4"></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e5"></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e6"></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e7"></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e8"></td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e9"></td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e10"></td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e11"></td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e12"></td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e13"></td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e14"></td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e15"></td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e16"></td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e17"></td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e18"></td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e19"></td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e20"></td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td><input type="text"></td>
+        <td><input type="number" id="e21"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="headings">Balance</td>
+        <td><b id="balance"></b></td>
+    </tr> 
+  </table>
+  <button onclick=" balanceCalculation()">Calculate</button>
+  <button onclick="toPrint()" id="downloadBtn">Download Page</button>
+  <p>Designed by <a href="#" id="designBy">Tech De Phlashly</a></p>
+
+  <script type="text/javascript" src="script.js"></script>
+  
+</body>
+</html>

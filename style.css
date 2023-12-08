@@ -45,10 +45,6 @@ button:hover{
 background-color: blueviolet;
 color: white;
 }
-/* body{
-    background-color: #0b4579;
-} */
-/* <span style="font-family: verdana, geneva, sans-serif;"> */
 
 
 body{
@@ -94,6 +90,9 @@ body{
      display: block;
      margin-left: 20px;
  }
+ input[type="text"]{
+    font-size:medium;
+ }
  input.loginText{
      width: 80%;
      margin: 0 0 20px 20px;
@@ -114,7 +113,6 @@ body{
      height: 40px;
      border-radius: 20px;
      background: #ecde14;
-   /*   color: white; */
      font-size: 20px;
      cursor: pointer;
  }
@@ -137,4 +135,4 @@ body{
      background: blueviolet;
      color: white;
  }
- /* </span> */
+
