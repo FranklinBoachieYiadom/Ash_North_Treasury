@@ -25,7 +25,7 @@ function date() {
   document.getElementById("date").innerText = out;
 }
 
-// This function controls the whole program, it is the onlickfunction for the calculate button
+// This function controls the Income Book, it is the onlickfunction for the calculate button
 var Amnt = [];
 var sum = 0;
 function SumOfIncme() {
@@ -121,7 +121,7 @@ function SumOfIncme() {
     Lsum += LAmount[i];
   }
   document.getElementById("lTotal").textContent = "Ghc " + Lsum.toFixed(2);
- 
+
   //Here i am adding all the items in the array, to give me the total of the Conference Fund
   var cFunds =CcbfAmount + ClooseOfferingAmount + CthanksAmount + parseFloat(tithe);
   document.getElementById("cTotal").textContent = "Ghc " + cFunds.toFixed(2);
@@ -135,13 +135,13 @@ function SumOfIncme() {
 function toPrint(){
     window.print();
 }
+
 //Here is the function that lets you go to the Balance page
 function goToSecondPage(){
   window.location.href="balance.html"
   }
 
-//Here for the Calculation ofthe balance
-
+//Here for the Calculation ofthe Balance Sheet (Income and Expenditure)
 function balanceCalculation(){
   var arrBalance=[];
     var expSum=0;
@@ -166,5 +166,569 @@ function balanceCalculation(){
     }
 }
 
+//Here is a function, when clicked, takes you to Cut-off page
+function goToCutoff(){
+  window.location.href="cutoff.html" 
+}
+
+//This the portion for cut off Calculations and among others
+
+function calCutOff(){
+//Here is for transfering all the Dates Choosen for Conference to District too
+for( let i=1; i<=5; i++){
+var changeDate=document.getElementById("cdate"+i).value
+document.getElementById("ddate"+i).value=changeDate;
+}
+
+ //For finding the  sum of tithes
+  var totalTithe=[];
+  var sumOfTotalTithe=0;
+  for(let i=1; i<=5; i++){
+    var singleTithe=document.getElementById("t"+i).value;
+  if(singleTithe!=""){
+    totalTithe.push(parseFloat(singleTithe));
+  } 
+  }
+ //Here we are going to add up all the values in the array
+for(let i=0; i<totalTithe.length; i++){ 
+  sumOfTotalTithe +=totalTithe[i]; 
+}
+document.getElementById("totalTithe").innerText=sumOfTotalTithe.toFixed(2);
+ 
+//For finding the  sum of Conference C.B.F
+  var totalCbf=[];
+  var sumOfTotalCbf=0;
+  for(let i=1; i<=5; i++){
+    var singleCbf=document.getElementById("c"+i).value;
+  if(singleCbf!=""){
+    totalCbf.push(parseFloat(singleCbf));
+  } 
+  }
+ //Here we are going to add up all the values in the array
+for(let i=0; i<totalCbf.length; i++){ 
+  sumOfTotalCbf +=totalCbf[i]; 
+}
+document.getElementById("totalCbf").innerText=sumOfTotalCbf.toFixed(2);
+ 
+//For finding the  sum of Loose Offering
+  var totalLoffering=[];
+  var sumOfTotalLoffering=0;
+  for(let i=1; i<=5; i++){
+    var singleLoffering=document.getElementById("l"+i).value;
+  if(singleLoffering!=""){
+    totalLoffering.push(parseFloat(singleLoffering));
+  } 
+  }
+ //Here we are going to add up all the values in the array
+for(let i=0; i<totalLoffering.length; i++){ 
+  sumOfTotalLoffering +=totalLoffering[i]; 
+}
+document.getElementById("totalLoffering").innerText=sumOfTotalLoffering.toFixed(2);
+ 
+//For finding the  sum of Thanksgiving
+  var totalTgiving=[];
+  var sumOfTotalTgiving=0;
+  for(let i=1; i<=5; i++){
+    var singleTgiving=document.getElementById("tg"+i).value;
+  if(singleTgiving!=""){
+    totalTgiving.push(parseFloat(singleTgiving));
+   
+  } 
+  }
+ //Here we are going to add up all the values in the array
+for(let i=0; i<totalTgiving.length; i++){ 
+  sumOfTotalTgiving +=totalTgiving[i]; 
+}
+document.getElementById("totalTgiving").innerText=sumOfTotalTgiving.toFixed(2);
+ 
+//For finding the  sum of Sabbath School Order
+  var totalSsch=[];
+  var sumOfTotalSsch=0;
+  for(let i=1; i<=5; i++){
+    var singleSsch=document.getElementById("s"+i).value;
+  if(singleSsch!=""){
+    totalSsch.push(parseFloat(singleSsch));
+   
+  } 
+  }
+ //Here we are going to add up all the values in the array
+for(let i=0; i<totalSsch.length; i++){ 
+  sumOfTotalSsch +=totalSsch[i]; 
+}
+document.getElementById("totalSsch").innerText=sumOfTotalSsch.toFixed(2);
+
+ 
+//For finding the  sum of First Empty Text Field
+  var totalFirstInp=[];
+  var sumOfTotalFirstInp=0;
+  for(let i=1; i<=5; i++){
+    var singleFirstInp=document.getElementById("firstInp"+i).value;
+  if(singleFirstInp!=""){
+    totalFirstInp.push(parseFloat(singleFirstInp));
+   
+  } 
+  }
+ //Here we are going to add up all the values in the array
+for(let i=0; i<totalFirstInp.length; i++){ 
+  sumOfTotalFirstInp +=totalFirstInp[i]; 
+}
+document.getElementById("totalFirstInp").innerText=sumOfTotalFirstInp.toFixed(2);
+ 
+//For finding the  sum of Second Empty Text Field
+  var totalSecondInp=[];
+  var sumOfTotalSecondInp=0;
+  for(let i=1; i<=5; i++){
+    var singleSecondInp=document.getElementById("secondInp"+i).value;
+  if(singleSecondInp!=""){
+    totalSecondInp.push(parseFloat(singleSecondInp));
+   
+  } 
+  }
+ //Here we are going to add up all the values in the array
+for(let i=0; i<totalSecondInp.length; i++){ 
+  sumOfTotalSecondInp +=totalSecondInp[i]; 
+}
+document.getElementById("totalSecondInp").innerText=sumOfTotalSecondInp.toFixed(2);
+ 
+//For finding the  sum of Third Empty Text Field
+  var totalThirdInp=[];
+  var sumOfTotalThirdInp=0;
+  for(let i=1; i<=5; i++){
+    var singleThirdInp=document.getElementById("thirdInp"+i).value;
+  if(singleThirdInp!=""){
+    totalThirdInp.push(parseFloat(singleThirdInp)); 
+  } 
+  }
+ //Here we are going to add up all the values in the array
+for(let i=0; i<totalThirdInp.length; i++){ 
+  sumOfTotalThirdInp +=totalThirdInp[i]; 
+}
+document.getElementById("totalThirdInp").innerText=sumOfTotalThirdInp.toFixed(2);
 
 
+//Here we are going to get the total sum Conference Items
+var allConfSum= sumOfTotalTithe+sumOfTotalCbf+sumOfTotalLoffering+sumOfTotalTgiving+sumOfTotalSsch+sumOfTotalFirstInp+sumOfTotalSecondInp+sumOfTotalThirdInp
+document.getElementById("totalConfFund").textContent=allConfSum.toFixed(2);
+
+//Here we are going to get the sum for each week
+// Here is sum for week 1
+var weekOne=[];
+var firstTithe=document.getElementById("t1").value
+if(firstTithe!=""){
+  weekOne.push(parseFloat(firstTithe))
+}
+var firstCbf=document.getElementById("c1").value
+if(firstCbf!=""){
+  weekOne.push(parseFloat(firstCbf))
+}
+var firstOffering=document.getElementById("l1").value
+if(firstOffering!=""){
+  weekOne.push(parseFloat(firstOffering))
+}
+var firstthanks=document.getElementById("tg1").value
+if(firstthanks!=""){
+  weekOne.push(parseFloat(firstthanks))
+}
+var firstSsch=document.getElementById("s1").value
+if(firstSsch!=""){
+  weekOne.push(parseFloat(firstSsch))
+}
+var firstEmptyOne=document.getElementById("firstInp1").value
+if(firstEmptyOne!=""){
+  weekOne.push(parseFloat(firstEmptyOne))
+}
+var firstEmptyTwo=document.getElementById("secondInp1").value
+if(firstEmptyTwo!=""){
+  weekOne.push(parseFloat(firstEmptyTwo))
+}
+var firstEmptyThree=document.getElementById("thirdInp1").value
+if(firstEmptyThree!=""){
+  weekOne.push(parseFloat(firstEmptyThree))
+}
+//Here we calculate the sum of the items in the array for Week 1
+var sumOfweekOne=0;
+for(let i=0; i<weekOne.length; i++){
+  sumOfweekOne +=weekOne[i]
+}
+document.getElementById("weekOneSum").textContent=sumOfweekOne.toFixed(2);
+
+
+//Here we are going to get the sum for each week
+// Here is sum for week 2
+var weekTwo=[];
+var secondTithe=document.getElementById("t2").value
+if(secondTithe!=""){
+  weekTwo.push(parseFloat(secondTithe))
+}
+var secondCbf=document.getElementById("c2").value
+if(secondCbf!=""){
+  weekTwo.push(parseFloat(secondCbf))
+}
+var secondOffering=document.getElementById("l2").value
+if(secondOffering!=""){
+  weekTwo.push(parseFloat(secondOffering))
+}
+var secondthanks=document.getElementById("tg2").value
+if(secondthanks!=""){
+  weekTwo.push(parseFloat(secondthanks))
+}
+var secondSsch=document.getElementById("s2").value
+if(secondSsch!=""){
+  weekTwo.push(parseFloat(secondSsch))
+}
+var secondEmptyOne=document.getElementById("firstInp2").value
+if(secondEmptyOne!=""){
+  weekTwo.push(parseFloat(secondEmptyOne))
+}
+var secondEmptyTwo=document.getElementById("secondInp2").value
+if(secondEmptyTwo!=""){
+  weekTwo.push(parseFloat(secondEmptyTwo))
+}
+var secondEmptyThree=document.getElementById("thirdInp2").value
+if(secondEmptyThree!=""){
+  weekTwo.push(parseFloat(secondEmptyThree))
+}
+//Here we calculate the sum of the items in the array for Week 1
+var sumOfWeekTwo=0;
+for(let i=0; i<weekTwo.length; i++){
+  sumOfWeekTwo +=weekTwo[i]
+}
+document.getElementById("weekTwoSum").textContent=sumOfWeekTwo.toFixed(2);
+
+//Here we are going to get the sum for each week
+// Here is sum for week 3
+var weekThree=[];
+var thirdTithe=document.getElementById("t3").value
+if(thirdTithe!=""){
+  weekThree.push(parseFloat(thirdTithe))
+}
+var thirdCbf=document.getElementById("c3").value
+if(thirdCbf!=""){
+  weekThree.push(parseFloat(thirdCbf))
+}
+var thirdOffering=document.getElementById("l3").value
+if(thirdOffering!=""){
+  weekThree.push(parseFloat(thirdOffering))
+}
+var thirdthanks=document.getElementById("tg3").value
+if(thirdthanks!=""){
+  weekThree.push(parseFloat(thirdthanks))
+}
+var thirdSsch=document.getElementById("s3").value
+if(thirdSsch!=""){
+  weekThree.push(parseFloat(thirdSsch))
+}
+var thirdEmptyOne=document.getElementById("firstInp3").value
+if(thirdEmptyOne!=""){
+  weekThree.push(parseFloat(thirdEmptyOne))
+}
+var thirdEmptyTwo=document.getElementById("secondInp3").value
+if(thirdEmptyTwo!=""){
+  weekThree.push(parseFloat(thirdEmptyTwo))
+}
+var thirdEmptyThree=document.getElementById("thirdInp3").value
+if(thirdEmptyThree!=""){
+  weekThree.push(parseFloat(thirdEmptyThree))
+}
+//Here we calculate the sum of the items in the array for Week 1
+var sumOfWeekThree=0;
+for(let i=0; i<weekThree.length; i++){
+  sumOfWeekThree +=weekThree[i]
+}
+document.getElementById("weekThreeSum").textContent=sumOfWeekThree.toFixed(2);
+
+//Here we are going to get the sum for each week
+// Here is sum for week 4
+var weekFour=[];
+var fourthTithe=document.getElementById("t4").value
+if(fourthTithe!=""){
+  weekFour.push(parseFloat(fourthTithe))
+}
+var fourthCbf=document.getElementById("c4").value
+if(fourthCbf!=""){
+  weekFour.push(parseFloat(fourthCbf))
+}
+var fourthOffering=document.getElementById("l4").value
+if(fourthOffering!=""){
+  weekFour.push(parseFloat(fourthOffering))
+}
+var fourththanks=document.getElementById("tg4").value
+if(fourththanks!=""){
+  weekFour.push(parseFloat(fourththanks))
+}
+var fourthSsch=document.getElementById("s4").value
+if(fourthSsch!=""){
+  weekFour.push(parseFloat(fourthSsch))
+}
+var fourthEmptyOne=document.getElementById("firstInp4").value
+if(fourthEmptyOne!=""){
+  weekFour.push(parseFloat(fourthEmptyOne))
+}
+var fourthEmptyTwo=document.getElementById("secondInp4").value
+if(fourthEmptyTwo!=""){
+  weekFour.push(parseFloat(fourthEmptyTwo))
+}
+var fourthEmptyThree=document.getElementById("thirdInp4").value
+if(fourthEmptyThree!=""){
+  weekFour.push(parseFloat(fourthEmptyThree))
+}
+//Here we calculate the sum of the items in the array for Week 1
+var sumOfWeekFour=0;
+for(let i=0; i<weekFour.length; i++){
+  sumOfWeekFour +=weekFour[i]
+}
+document.getElementById("weekFourSum").textContent=sumOfWeekFour.toFixed(2);
+
+//Here we are going to get the sum for each week
+// Here is sum for week 5
+var weekFive=[];
+var fifthTithe=document.getElementById("t5").value
+if(fifthTithe!=""){
+  weekFive.push(parseFloat(fifthTithe))
+}
+var fifthCbf=document.getElementById("c5").value
+if(fifthCbf!=""){
+  weekFive.push(parseFloat(fifthCbf))
+}
+var fifthOffering=document.getElementById("l5").value
+if(fifthOffering!=""){
+  weekFive.push(parseFloat(fifthOffering))
+}
+var fifththanks=document.getElementById("tg5").value
+if(fifththanks!=""){
+  weekFive.push(parseFloat(fifththanks))
+}
+var fifthSsch=document.getElementById("s5").value
+if(fifthSsch!=""){
+  weekFive.push(parseFloat(fifthSsch))
+}
+var fifthEmptyOne=document.getElementById("firstInp5").value
+if(fifthEmptyOne!=""){
+  weekFive.push(parseFloat(fifthEmptyOne))
+}
+var fifthEmptyTwo=document.getElementById("secondInp5").value
+if(fifthEmptyTwo!=""){
+  weekFive.push(parseFloat(fifthEmptyTwo))
+}
+var fifthEmptyThree=document.getElementById("thirdInp5").value
+if(fifthEmptyThree!=""){
+  weekFive.push(parseFloat(fifthEmptyThree))
+}
+//Here we calculate the sum of the items in the array for Week 1
+var sumOfWeekFive=0;
+for(let i=0; i<weekFive.length; i++){
+  sumOfWeekFive +=weekFive[i]
+}
+document.getElementById("weekFiveSum").textContent=sumOfWeekFive.toFixed(2);
+
+
+//Here we are going to find 25% of What ever value we got for Confernce, that will be for District
+
+//Here we calculate for the District CBF 
+var distCbf=[];
+var sumOfDistCbf=0;
+for(let i=1; i<=5; i++){
+  var singleCbf=document.getElementById("c"+i).value;
+  if(singleCbf!=""){
+    var twentyFivePerSingleCbf=singleCbf*(25/100);
+    distCbf.push(twentyFivePerSingleCbf);
+    document.getElementById("cB"+i).textContent=twentyFivePerSingleCbf.toFixed(2);
+  }
+}
+//Here we calculate for all the sum of the 25% received
+for(let i=0; i<distCbf.length; i++){
+  sumOfDistCbf +=distCbf[i]
+}
+document.getElementById("totalDistCbf").textContent=sumOfDistCbf.toFixed(2)
+
+//Here we calculate for the District Loose Offering 
+var distLO=[];
+var sumOfDistLO=0;
+for(let i=1; i<=5; i++){
+  var singleLO=document.getElementById("l"+i).value;
+  if(singleLO!=""){
+    var twentyFivePerSingleLO=singleLO*(25/100);
+    distLO.push(twentyFivePerSingleLO);
+    document.getElementById("lO"+i).textContent=twentyFivePerSingleLO.toFixed(2);
+  }
+}
+//Here we calculate for all the sum of the 25% received
+for(let i=0; i<distLO.length; i++){
+  sumOfDistLO +=distLO[i]
+}
+document.getElementById("totalDistLO").textContent=sumOfDistLO.toFixed(2)
+
+
+//Here we calculate for the District Thanks Giving
+var distTG=[];
+var sumOfDistTG=0;
+for(let i=1; i<=5; i++){
+  var singleTG=document.getElementById("tg"+i).value;
+  if(singleTG!=""){
+    var twentyFivePerSingleTG=singleTG*(25/100);
+    distTG.push(twentyFivePerSingleTG);
+    document.getElementById("TG"+i).textContent=twentyFivePerSingleTG.toFixed(2);
+  }
+}
+//Here we calculate for all the sum of the 25% received
+for(let i=0; i<distTG.length; i++){
+  sumOfDistTG +=distTG[i]
+}
+document.getElementById("totalDistTG").textContent=sumOfDistTG.toFixed(2)
+
+
+//Here is the Amount for Transportation
+var transport=100;
+document.getElementById("transport").textContent=transport.toFixed(2);
+document.getElementById("transTotal").textContent=transport.toFixed(2);
+
+//Here is for Doryumu School
+var school=170;
+document.getElementById("school").textContent=school.toFixed(2);
+document.getElementById("schTotal").textContent=school.toFixed(2);
+
+
+//Here is the total for all the District cut off funds
+var totalDistCutOffFunds= sumOfDistCbf+sumOfDistLO+sumOfDistTG+transport+school;
+document.getElementById("totalDistCutFunds").textContent=totalDistCutOffFunds.toFixed(2);
+
+//Here is the Calculation for the Grand Total, Conference plus District
+var grandTotal=allConfSum+totalDistCutOffFunds;
+document.getElementById("grandTotal").textContent=grandTotal.toFixed(2);
+
+
+//Here we are going to get the sum for each week for DISTRICT CUT OFF
+// Here is sum for week 1
+var distWeekOne=[];
+var firstdistCbf=document.getElementById("cB1").textContent
+if(firstdistCbf!=""){
+  distWeekOne.push(parseFloat(firstdistCbf))
+}
+var firstdistOffering=document.getElementById("lO1").textContent
+if(firstdistOffering!=""){
+  distWeekOne.push(parseFloat(firstdistOffering))
+}
+var firstdistthanks=document.getElementById("TG1").textContent
+if(firstdistthanks!=""){
+  distWeekOne.push(parseFloat(firstdistthanks))
+}
+var firstdistTrans=document.getElementById("transport").textContent
+if(firstdistTrans!=""){
+  distWeekOne.push(parseFloat(firstdistTrans))
+}
+var firstdistSch=document.getElementById("school").textContent
+if(firstdistSch!=""){
+  distWeekOne.push(parseFloat(firstdistSch))
+}
+
+//Here we calculate the sum of the items in the array for Week 1
+var sumOfdistWeekOne=0;
+for(let i=0; i<distWeekOne.length; i++){
+  sumOfdistWeekOne +=distWeekOne[i]
+}
+document.getElementById("distWeekOneSum").textContent=sumOfdistWeekOne.toFixed(2);
+
+//Here we are going to get the sum for each week for DISTRICT CUT OFF
+// Here is sum for week 2
+var distWeekTwo=[];
+var seconddistCbf=document.getElementById("cB2").textContent
+if(seconddistCbf!=""){
+  distWeekTwo.push(parseFloat(seconddistCbf))
+}
+var seconddistOffering=document.getElementById("lO2").textContent
+if(seconddistOffering!=""){
+  distWeekTwo.push(parseFloat(seconddistOffering))
+}
+var seconddistthanks=document.getElementById("TG2").textContent
+if(seconddistthanks!=""){
+  distWeekTwo.push(parseFloat(seconddistthanks))
+}
+
+//Here we calculate the sum of the items in the array for Week 2
+var sumOfdistWeekTwo=0;
+for(let i=0; i<distWeekTwo.length; i++){
+  sumOfdistWeekTwo +=distWeekTwo[i]
+}
+document.getElementById("distWeekTwoSum").textContent=sumOfdistWeekTwo.toFixed(2);
+
+
+//Here we are going to get the sum for each week for DISTRICT CUT OFF
+// Here is sum for week 3
+var distWeekThree=[];
+var thirddistCbf=document.getElementById("cB3").textContent
+if(thirddistCbf!=""){
+  distWeekThree.push(parseFloat(thirddistCbf))
+}
+var thirddistOffering=document.getElementById("lO3").textContent
+if(thirddistOffering!=""){
+  distWeekThree.push(parseFloat(thirddistOffering))
+}
+var thirddistthanks=document.getElementById("TG3").textContent
+if(thirddistthanks!=""){
+  distWeekThree.push(parseFloat(thirddistthanks))
+}
+
+//Here we calculate the sum of the items in the array for Week 3
+var sumOfdistWeekThree=0;
+for(let i=0; i<distWeekThree.length; i++){
+  sumOfdistWeekThree +=distWeekThree[i]
+}
+document.getElementById("distWeekThreeSum").textContent=sumOfdistWeekThree.toFixed(2);
+
+
+//Here we are going to get the sum for each week for DISTRICT CUT OFF
+// Here is sum for week 4
+var distWeekFour=[];
+var fourthdistCbf=document.getElementById("cB4").textContent
+if(fourthdistCbf!=""){
+  distWeekFour.push(parseFloat(fourthdistCbf))
+}
+var fourthdistOffering=document.getElementById("lO4").textContent
+if(fourthdistOffering!=""){
+  distWeekFour.push(parseFloat(fourthdistOffering))
+}
+var fourthdistthanks=document.getElementById("TG4").textContent
+if(fourthdistthanks!=""){
+  distWeekFour.push(parseFloat(fourthdistthanks))
+}
+
+//Here we calculate the sum of the items in the array for Week 4
+var sumOfdistWeekFour=0;
+for(let i=0; i<distWeekFour.length; i++){
+  sumOfdistWeekFour +=distWeekFour[i]
+}
+document.getElementById("distWeekFourSum").textContent=sumOfdistWeekFour.toFixed(2);
+
+
+
+//Here we are going to get the sum for each week for DISTRICT CUT OFF
+// Here is sum for week 5
+var distWeekFive=[];
+var FifthdistCbf=document.getElementById("cB5").textContent
+if(FifthdistCbf!=""){
+  distWeekFive.push(parseFloat(FifthdistCbf))
+}
+var FifthdistOffering=document.getElementById("lO5").textContent
+if(FifthdistOffering!=""){
+  distWeekFive.push(parseFloat(FifthdistOffering))
+}
+var Fifthdistthanks=document.getElementById("TG5").textContent
+if(Fifthdistthanks!=""){
+  distWeekFive.push(parseFloat(Fifthdistthanks))
+}
+
+//Here we calculate the sum of the items in the array for Week 5
+var sumOfdistWeekFive=0;
+for(let i=0; i<distWeekFive.length; i++){
+  sumOfdistWeekFive +=distWeekFive[i]
+}
+document.getElementById("distWeekFiveSum").textContent=sumOfdistWeekFive.toFixed(2);
+
+
+
+
+
+
+
+
+}

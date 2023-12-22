@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ash.North SDA Church Treasury</title>
+        <link rel="icon" type="image/icon" href="favicon.png">
+        <link rel="stylesheet" href="style.css">     
+    </head>
+<body>
+    <h2>MERIDIAN GHANA CONFERENCE OF SDA CHURCH</h2>
+    <h3 class="h3style">ASHAIMAN NORTH</h3>
+    <h3 class="h3style"><u>CUT OFF REPORT</u></h3>
+    <br>
+    <div style="text-align: center;">
+    <p><b>MONTH AND YEAR:</b><input type="month"></p>
+    <p><b>RECEIPT NUM:  FROM:<input type="number">  <span>TO:<input type="number"></span></b></p>
+    <p><b>TOTAL CONTRIBUTORS FOR THE MONTH:  TITHE:<input type="number">  <span>C.B.F:<input type="number"></span></b></p>
+    </div>
+    <br>
+    <h3 class="h3style"><u>CONFERENCE</u></h3>
+    <table>
+        <tr>
+            <td><b>DATE</b></td>
+            <td><input type="date" id="cdate1"></td>
+            <td><input type="date" id="cdate2"></td>
+            <td><input type="date" id="cdate3"></td>
+            <td><input type="date" id="cdate4"></td>
+            <td><input type="date" id="cdate5"></td>
+            <td><b>TOTAL</b></td>
+        </tr>
+        <tr>
+            <td>TITHE</td>
+            <td><input type="number" class="smallNumInp" id="t1"></td>
+            <td><input type="number" class="smallNumInp" id="t2"></td>
+            <td><input type="number" class="smallNumInp" id="t3"></td>
+            <td><input type="number" class="smallNumInp" id="t4"></td>
+            <td><input type="number" class="smallNumInp" id="t5"></td>
+            <td id="totalTithe"></td>
+        </tr>
+        <tr>
+            <td>CBF</td>
+            <td><input type="number" class="smallNumInp" id="c1"></td>
+            <td><input type="number" class="smallNumInp" id="c2"></td>
+            <td><input type="number" class="smallNumInp" id="c3"></td>
+            <td><input type="number" class="smallNumInp" id="c4"></td>
+            <td><input type="number" class="smallNumInp" id="c5"></td>
+            <td id="totalCbf"></td>
+        </tr>
+        <tr>
+        <td>LOOSE OFFERING</td>
+            <td><input type="number" class="smallNumInp" id="l1"></td>
+            <td><input type="number" class="smallNumInp" id="l2"></td>
+            <td><input type="number" class="smallNumInp" id="l3"></td>
+            <td><input type="number" class="smallNumInp" id="l4"></td>
+            <td><input type="number" class="smallNumInp" id="l5"></td>
+            <td id="totalLoffering"></td>
+        </tr>
+        <tr>
+        <td>THANKSGIVING</td>
+            <td><input type="number" class="smallNumInp" id="tg1"></td>
+            <td><input type="number" class="smallNumInp" id="tg2"></td>
+            <td><input type="number" class="smallNumInp" id="tg3"></td>
+            <td><input type="number" class="smallNumInp" id="tg4"></td>
+            <td><input type="number" class="smallNumInp" id="tg5"></td>
+            <td id="totalTgiving"></td>
+        </tr>
+        <tr>
+            <td>SABBATH SCHOOL ORDER</td>
+            <td><input type="number" class="smallNumInp" id="s1"></td>
+            <td><input type="number" class="smallNumInp" id="s2"></td>
+            <td><input type="number" class="smallNumInp" id="s3"></td>
+            <td><input type="number" class="smallNumInp" id="s4"></td>
+            <td><input type="number" class="smallNumInp" id="s5"></td>
+            <td id="totalSsch"></td>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="number" class="smallNumInp" id="firstInp1"></td>
+            <td><input type="number" class="smallNumInp" id="firstInp2"></td>
+            <td><input type="number" class="smallNumInp" id="firstInp3"></td>
+            <td><input type="number" class="smallNumInp" id="firstInp4"></td>
+            <td><input type="number" class="smallNumInp" id="firstInp5"></td>
+            <td id="totalFirstInp"></td>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="number" class="smallNumInp" id="secondInp1"></td>
+            <td><input type="number" class="smallNumInp" id="secondInp2"></td>
+            <td><input type="number" class="smallNumInp" id="secondInp3"></td>
+            <td><input type="number" class="smallNumInp" id="secondInp4"></td>
+            <td><input type="number" class="smallNumInp" id="secondInp5"></td>
+            <td id="totalSecondInp"></td>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="number" class="smallNumInp" id="thirdInp1"></td>
+            <td><input type="number" class="smallNumInp" id="thirdInp2"></td>
+            <td><input type="number" class="smallNumInp" id="thirdInp3"></td>
+            <td><input type="number" class="smallNumInp" id="thirdInp4"></td>
+            <td><input type="number" class="smallNumInp" id="thirdInp5"></td>
+            <td id="totalThirdInp"></td>
+        </tr>
+        <tr>
+            <td><b>TOTAL</b></td>
+            <td><b id="weekOneSum"></b></td>
+            <td><b id="weekTwoSum"></b></td>
+            <td><b id="weekThreeSum"></b></td>
+            <td><b id="weekFourSum"></b></td>
+            <td><b id="weekFiveSum"></b></td>
+            <td><b id="totalConfFund">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+        </tr>
+    </table>
+
+
+    <h3 class="h3style"><u>DISTRICT</u></h3>
+    <table>
+        <tr>
+            <td><b>DATE</b></td>
+            <td><input type="date" id="ddate1"></td>
+            <td><input type="date" id="ddate2"></td>
+            <td><input type="date" id="ddate3"></td>
+            <td><input type="date" id="ddate4"></td>
+            <td><input type="date" id="ddate5"></td>
+            <td><b>TOTAL</b></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td >CBF</td>
+            <td id="cB1"></td>
+            <td id="cB2"></td>
+            <td id="cB3"></td>
+            <td id="cB4"></td>
+            <td id="cB5"></td>
+            <td id="totalDistCbf"></td>
+        </tr>
+        <tr>
+            <td>LOOSE OFFERING</td>
+            <td id="lO1"></td>
+            <td id="lO2"></td>
+            <td id="lO3"></td>
+            <td id="lO4"></td>
+            <td id="lO5"></td>
+            <td id="totalDistLO"></td>
+        </tr>
+        <tr>
+            <td>THANKSGIVING</td>
+            <td id="TG1"></td>
+            <td id="TG2"></td>
+            <td id="TG3"></td>
+            <td id="TG4"></td>
+            <td id="TG5"></td>
+            <td id="totalDistTG"></td>
+        </tr>
+        <tr>
+            <td>TRANSPORTATION</td>
+            <td id="transport"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="transTotal"></td>
+        </tr>
+        <tr>
+            <td>DORYUMU SCH PROJECT</td>
+            <td id="school"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="schTotal"></td>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><b>TOTAL</b></td>
+            <td><b id="distWeekOneSum"></b></td>
+            <td><b id="distWeekTwoSum"></b></td>
+            <td><b id="distWeekThreeSum"></b></td>
+            <td><b id="distWeekFourSum"></b></td>
+            <td><b id="distWeekFiveSum"></b></td>
+            <td><b id="totalDistCutFunds">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>        
+        </tr>
+        <tr>
+            <td><b>GRAND TOTAL</b></td>
+            <td colspan="5" style="font-size: xx-large; text-align: center; font-weight: bolder;" id="grandTotal"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <p style="padding-left: 20%;">................................................<span style="margin-left: 40%;">................................................</span></p>
+    <p style="padding-left: 21%;"><b>FISRT ELDER</b><span style="margin-left: 50%;"><b>TREASURER</b></span></p>
+
+  <button onclick="calCutOff()">Calculate</button>
+
+  <button onclick="toPrint()">Download as PDF</button>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

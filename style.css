@@ -136,3 +136,10 @@ body{
      color: white;
  }
 
+ .h3style{
+    text-align: center; 
+    line-height: 0px;
+ }
+ .smallNumInp{
+    width: 100px;
+ }
