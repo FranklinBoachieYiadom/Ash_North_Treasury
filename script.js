@@ -8,7 +8,7 @@ function login(event) {
     (userName == "eben" && passWord == "eben")
   ) {
     /*  alert("Login Successful"); */
-    var targetPageUrl = "main.html";
+    var targetPageUrl = "home.html";
     window.location.href = targetPageUrl;
   } else {
     alert("Wrong Credentials");
@@ -724,11 +724,31 @@ for(let i=0; i<distWeekFive.length; i++){
 }
 document.getElementById("distWeekFiveSum").textContent=sumOfdistWeekFive.toFixed(2);
 
-
-
-
-
-
-
-
 }
+
+//Here is the function calculation of the Denominations
+var totalCalculation=[];
+function getInpt(){
+ function innerHeight(id1,amount,id2){
+        var inputs= document.getElementById(id1).value;
+        var calculate=  amount * inputs
+        document.getElementById(id2).innerText= "GH₵"+calculate.toFixed(2)
+        totalCalculation.push(calculate);
+    }
+    innerHeight("twoHundred",200,"answer1")
+    innerHeight("oneHundred",100,"answer2")
+    innerHeight("fifty",50,"answer3")
+    innerHeight("twenty",20,"answer4")
+    innerHeight("ten",10,"answer5")
+    innerHeight("five",5,"answer6")
+    innerHeight("two",2,"answer7")
+    innerHeight("one",1,"answer8")
+    innerHeight("twoP",2,"answer9")
+    innerHeight("oneP",1,"answer10")
+    innerHeight("fiftyP",0.5,"answer11")
+    innerHeight("twentyP",0.2,"answer12")
+    innerHeight("tenP",0.1,"answer13")
+
+    const grandTotal= totalCalculation.reduce((sum,int)=>sum+int,0);
+    document.getElementById("grandTot").innerText="GH₵"+grandTotal.toFixed(2)   
+} 

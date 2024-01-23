@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ash.North SDA Church Treasury</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/icon" href="favicon.png" />
+    <script src="https://kit.fontawesome.com/8ebf6fd839.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+  <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+      </label>
+      <label class=logo3 for="">Ash.North Treasury Dept.</label>
+      <ul>
+          <li><a href="main.html">Income-Book</a></li>
+          <li><a href="balance.html">Expenditure-Book</a></li>
+          <li><a href="cutoff.html">Cut-Off Sheet</a></li>
+          <li><a class=active href="denominations.html">Denominations</a></li>
+        <!--   <li><a href="#">Home5</a></li> -->
+      </ul>
+  </nav>
+  <table>
+    <tr>
+        <td colspan="3">Currency Convertor </td>
+    </tr>
+    <tr >
+        <td>GH₵200.00</td>
+        <td><input type="number" id="twoHundred"></td>
+        <td id="answer1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td>GH₵100.00</td>
+        <td><input type="number" id="oneHundred"></td>
+        <td id="answer2"></td>
+    </tr>
+    <tr>
+        <td>GH₵50.00</td>
+        <td><input type="number" id="fifty"></td>
+        <td id="answer3"></td>
+    </tr>
+    <tr>
+        <td>GH₵20.00</td>
+        <td><input type="number" id="twenty"></td>
+        <td id="answer4"></td>
+    </tr>
+    <tr>
+        <td>GH₵10.00</td>
+        <td><input type="number" id="ten"></td>
+        <td id="answer5"></td>
+    </tr>
+    <tr>
+        <td>GH₵5.00</td>
+        <td><input type="number" id="five"></td>
+        <td id="answer6"></td>
+    </tr>
+    <tr>
+        <td>GH₵2.00</td>
+        <td><input type="number" id="two"></td>
+        <td id="answer7"></td>
+    </tr>
+    <tr>
+        <td>GH₵1.00</td>
+        <td><input type="number" id="one"></td>
+        <td id="answer8"></td>
+    </tr>
+    <tr>
+        <td colspan="3">COINS</td>
+    </tr>
+    <tr>
+        <td>GH₵2.00</td>
+        <td><input type="number" id="twoP"></td>
+        <td id="answer9"></td>
+    </tr>
+    <tr>
+        <td>GH₵1.00</td>
+        <td><input type="number" id="oneP"></td>
+        <td id="answer10"></td>
+    </tr>
+    <tr>
+        <td>GH₵0.50</td>
+        <td><input type="number" id="fiftyP"></td>
+        <td id="answer11"></td>
+    </tr>
+    <tr>
+        <td>GH₵0.20</td>
+        <td><input type="number" id="twentyP"></td>
+        <td id="answer12"></td>
+    </tr>
+    <tr>
+        <td on>GH₵0.10</td>
+        <td><input type="number" id="tenP"></td>
+        <td id="answer13"></td>
+    </tr>
+    <tr>
+        <td>Total</td>
+        <td colspan="2" id="grandTot"></td>
+    </tr>
+    </table>
+    <button onclick="getInpt()">Calculate</button>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

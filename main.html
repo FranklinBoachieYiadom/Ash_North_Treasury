@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/icon" href="favicon.png" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://kit.fontawesome.com/8ebf6fd839.js" crossorigin="anonymous"></script>
   </head>
   <body onload="date()" id="mainBody">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+      </label>
+      <label class=logo3 for="">Ash.North Treasury Dept.</label>
+      <ul>
+          <li><a class=active href="main.html">Income-Book</a></li>
+          <li><a href="balance.html">Expenditure-Book</a></li>
+          <li><a href="cutoff.html">Cut-Off Sheet</a></li>
+          <li><a href="denominations.html">Denominations</a></li>
+        <!--   <li><a href="#">Home5</a></li> -->
+      </ul>
+  </nav>
     <img src="logo.png" class="logo1" alt="logo" />
     <p id="paragraph1">
       Seventh Day Adventist Church<br />Ashaiman North Church<br />Treasury
@@ -285,8 +294,6 @@
       </tr>
     </table>
     <button onclick="SumOfIncme()">Calculate</button>
-    <button id="balance" onclick="goToSecondPage()">Balnce Sheet</button>
-    <button onclick="goToCutoff()">Cut Off</button>
     <button onclick="toPrint()">Download Page</button>
     
     

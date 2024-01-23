@@ -1,3 +1,113 @@
+
+/*All the NavBar Styling Goes Here   */
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background: rgb(24, 12, 192);
+    height: 80px;
+    width: 100%;
+}
+label.logo3{
+    color:White;
+    font-size: 20px;
+    line-height: 80px;
+    padding: 0 100;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+text-decoration: none;
+color: white;
+font-size: 17px;
+padding: 7px 13px;
+border-radius:3px ;
+text-transform: uppercase;
+}
+a.active,a:hover{
+    background: rgb(209, 52, 230);
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    label.logo3{
+        font-size: 20px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    /* .logo1{
+        display: none;
+    } */
+    .checkbtn{
+        display: block ;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:  rgb(209, 52, 230);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: rgb(20, 68, 202);
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/* section{
+    background: url(pc.jpeg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+} */
+
+
+/*All the NavBar Styling Goes Here   */
+
+
+img.logo1{
+    position: unset;
+    margin-left: 44%;
+}
+
 .dateParagraph{
     font-size: larger;
     font-weight: bolder;
@@ -33,7 +143,6 @@ table{
 button{
     margin-top: 10px;
     font-size: medium;
-   
     padding: 10px;
     border-radius: 15px;
     font-weight: bold;
@@ -45,10 +154,7 @@ button:hover{
 background-color: blueviolet;
 color: white;
 }
-
-
 body{
-    /*  background: peru; */
      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
      background-image: url("bg1.jpg");
      background-size: cover;
@@ -72,7 +178,6 @@ body{
      width: 100px;
      height:100px;
      position: relative;
-     /* top: 70px; */
      left: calc(50% - 50px);
  }
  h1{
@@ -81,11 +186,11 @@ body{
  }
  h2{
      text-align: center;
-     background-color: #ecde14;
+     /* background-color: #ecde14; */
      padding: 30px;
  }
  
- label{
+ label.login{
      font-size: 18px;
      display: block;
      margin-left: 20px;
@@ -117,7 +222,7 @@ body{
      cursor: pointer;
  }
  
- a{
+ a#designBy{
      text-decoration: none;
      color: white;
      margin-left: 30%;
@@ -127,7 +232,7 @@ body{
     margin: 0;
     text-decoration: underline;
  }
- #designBy:hover{
+ a#designBy:hover{
     color: blue;
  }
  
@@ -139,6 +244,7 @@ body{
  .h3style{
     text-align: center; 
     line-height: 0px;
+    padding: 20px;
  }
  .smallNumInp{
     width: 100px;
