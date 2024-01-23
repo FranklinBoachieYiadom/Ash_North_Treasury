@@ -60,9 +60,6 @@ a.active,a:hover{
     }
 }
 @media (max-width: 858px){
-    /* .logo1{
-        display: none;
-    } */
     .checkbtn{
         display: block ;
     }
@@ -74,8 +71,7 @@ a.active,a:hover{
         top: 80px;
         left: -100%;
         text-align: center;
-        transition: all .5s;
-        
+        transition: all .5s;  
     }
     nav ul li{
         display: block;
@@ -87,7 +83,7 @@ a.active,a:hover{
     }
     a:hover, a.active{
         background: none;
-        color: rgb(20, 68, 202);
+        color: rgb(20, 68, 202);    
     }
     #check:checked ~ ul{
         left: 0;
@@ -167,6 +163,12 @@ body{
      margin: 70px auto;
      border-radius: 10px;
  }
+
+ td#grandTot{
+    font-size: larger;
+    font-weight: bolder;
+ }
+ 
  .logo{
      width: 100px;
      height:100px;
@@ -226,6 +228,7 @@ body{
      text-decoration: none;
      color: white;
      margin-left: 30%;
+
  }
  #designBy{
     color: black;
