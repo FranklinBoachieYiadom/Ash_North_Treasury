@@ -21,13 +21,21 @@ function date() {
   var day = currentDate.getDate();
   var month = currentDate.getMonth() + 1;
   var year = currentDate.getFullYear();
-  var out = day + "/" + month + "/" + year;
-  document.getElementById("date").innerText = out;
+  
+const Months=["January","February","March","April","May","June","July","August","September","October","November","December"]
+for(let i=0; i<Months.length; i++){
+  if(month==i+1){
+    month=Months[i]
+  }
+}
+var out = day + " " + month + ", " + year;
+
+document.getElementById("date").innerText = out;
 }
 
 // This function controls the Income Book, it is the onlickfunction for the calculate button
 var Amnt = [];
-var sum = 0;
+
 function SumOfIncme() {
   //I have named all the text boxes where you type the amounts with an a1, a2, a3 and so on, this loop will get all the values from the text boxes and store it in an array declared up there called Amt
   for (let i = 1; i <= 18; i++) {
@@ -41,10 +49,12 @@ function SumOfIncme() {
     }
   }
   //This is where the items in the array is added up to get Total
-  for (let i = 0; i < Amnt.length; i++) {
-    sum += Amnt[i];
-  }
+  
+  var sum =Amnt.reduce((total,initial)=>total+initial,0)
+
   document.getElementById("Inc").textContent = "Ghc " + sum.toFixed(2);
+//Now we are setting the array Amount back to Zero
+ Amnt=[0];
 
   //Here we are getting the inner text of the income particulars and sending it to the Local particulars side
   for (let i = 2; i <= 8; i++) {
@@ -174,7 +184,7 @@ function goToCutoff(){
 //This the portion for cut off Calculations and among others
 
 function calCutOff(){
-//Here is for transfering all the Dates Choosen for Conference to District too
+//Here is for transfering all the Dates Choosen from Conference to District
 for( let i=1; i<=5; i++){
 var changeDate=document.getElementById("cdate"+i).value
 document.getElementById("ddate"+i).value=changeDate;
@@ -750,5 +760,6 @@ function getInpt(){
     innerHeight("tenP",0.1,"answer13")
 
     const grandTotal= totalCalculation.reduce((sum,int)=>sum+int,0);
-    document.getElementById("grandTot").innerText="GH₵"+grandTotal.toFixed(2)   
+    document.getElementById("grandTot").innerText="GH₵"+grandTotal.toFixed(2)
+    totalCalculation=[0]   
 } 
