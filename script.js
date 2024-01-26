@@ -3,19 +3,47 @@ function login(event) {
   event.preventDefault();
   var userName = document.getElementById("uName").value;
   var passWord = document.getElementById("uPass").value;
+ 
   if (
     (userName == "franklin" && passWord == "franklin") ||
-    (userName == "eben" && passWord == "eben")
+    (userName == "eben" && passWord == "eben") ||
+    (userName == "mary" && passWord == "mary") ||
+    (userName == "stella" && passWord == "stella")
   ) {
     /*  alert("Login Successful"); */
+    userName=userName.toUpperCase();
+    if(userName=="FRANKLIN"){
+        userName="FRANKLIN"+"✅";
+    }
+    else if(userName=="STELLA"){
+        userName="Madam STELLA"+ "👸🏾";
+    }
+    else if(userName=="MARY"){
+        userName="Madam MARY"+ "👸🏾";
+    }
+    else if(userName=="EBEN"){
+        userName="EBEN"+ "✅";
+    }
+    localStorage.setItem("userName", userName);
     var targetPageUrl = "home.html";
     window.location.href = targetPageUrl;
-  } else {
+  } 
+  else {
     alert("Wrong Credentials");
   }
+ 
 }
 
-// The function to generate current Date
+var storedName = localStorage.getItem("userName");
+
+        if (storedName) {
+            document.getElementById("userNameDisplay").textContent = "Welcome, " + storedName;
+        } else {
+            document.getElementById("userNameDisplay").textContent = "WELCOME";
+        }
+
+
+// The function to generate current Date"
 function date() {
   var currentDate = new Date();
   var day = currentDate.getDate();
