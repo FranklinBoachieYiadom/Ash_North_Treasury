@@ -31,17 +31,20 @@ function login(event) {
   else {
     alert("Wrong Credentials");
   }
- 
 }
 
-var storedName = localStorage.getItem("userName");
+//Now this is the function that gets the name of the user stored in the 
+//local storage, its saved in a function and only called when that page opens, else it would distrupt other codes.
 
-        if (storedName) {
-            document.getElementById("userNameDisplay").textContent = "Welcome, " + storedName;
-        } else {
-            document.getElementById("userNameDisplay").textContent = "WELCOME";
-        }
+function getName(){
+  var storedName = localStorage.getItem("userName");
 
+  if (storedName) {
+      document.getElementById("userNameDisplay").textContent = "Welcome, " + storedName;
+  } else {
+      document.getElementById("userNameDisplay").textContent = "WELCOME";
+  }
+}
 
 // The function to generate current Date"
 function date() {
@@ -770,8 +773,11 @@ function getInpt(){
  function innerHeight(id1,amount,id2){
         var inputs= document.getElementById(id1).value;
         var calculate=  amount * inputs
-        document.getElementById(id2).innerText= "GH₵"+calculate.toFixed(2)
-        totalCalculation.push(calculate);
+        if(inputs!==""){
+          document.getElementById(id2).innerText= "GH₵"+calculate.toFixed(2)
+          totalCalculation.push(calculate);
+        }
+       
     }
     innerHeight("twoHundred",200,"answer1")
     innerHeight("oneHundred",100,"answer2")
