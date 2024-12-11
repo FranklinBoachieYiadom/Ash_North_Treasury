@@ -624,7 +624,7 @@ document.getElementById("transport").textContent=transport.toFixed(2);
 document.getElementById("transTotal").textContent=transport.toFixed(2);
 
 //Here is for Doryumu School
-var school=170;
+var school=240;
 document.getElementById("school").textContent=school.toFixed(2);
 document.getElementById("schTotal").textContent=school.toFixed(2);
 
@@ -635,7 +635,8 @@ document.getElementById("totalDistCutFunds").textContent=totalDistCutOffFunds.to
 
 //Here is the Calculation for the Grand Total, Conference plus District
 var grandTotal=allConfSum+totalDistCutOffFunds;
-document.getElementById("grandTotal").textContent=grandTotal.toFixed(2);
+var GRANDTOTAL= grandTotal.toFixed(2);
+document.getElementById("grandTotal").textContent=parseFloat(GRANDTOTAL).toLocaleString('en-US');
 
 
 //Here we are going to get the sum for each week for DISTRICT CUT OFF
